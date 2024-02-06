@@ -22,7 +22,7 @@ class SpindlerBattery(Battery, ABC):
         """Check if the spindler Battery needs service"""
         serviceable = self.current_date - self.last_service_date
 
-        if serviceable.days > 365 * 2:
+        if serviceable.days > 365 * 3:
             return True
 
         return False

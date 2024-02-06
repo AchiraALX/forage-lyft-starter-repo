@@ -19,7 +19,6 @@ eggs/
 .eggs/
 lib/
 lib64/
-car_parts/
 sdist/
 var/
 wheels/

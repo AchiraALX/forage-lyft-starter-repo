@@ -1,9 +1,10 @@
 from datetime import datetime
 
-from engine.capulet_engine import CapuletEngine
+from car_parts.engines.sternman_engine import SternmanEngine
+from car_parts.batteries.spindler import SpindlerBattery
 
 
-class Thovex(CapuletEngine):
+class Palindrome(SternmanEngine, SpindlerBattery):
     def needs_service(self):
         service_threshold_date = self.last_service_date.replace(year=self.last_service_date.year + 4)
         if service_threshold_date < datetime.today().date() or self.engine_should_be_serviced():
